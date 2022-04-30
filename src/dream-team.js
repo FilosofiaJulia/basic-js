@@ -18,17 +18,16 @@ function createDreamTeam(members) {
   
   if (!Array.isArray(members)) {
     return false;
-  } else {
-    for (let i = 0; i < members.length; i++) {
+  } 
+    
+  for (let i = 0; i < members.length; i++) {
       let item = members[i];
         if(typeof item === 'string') {
           item = item.trim().toUpperCase();
           array.push(item[0]);
-        } else {
-          continue;
-        }
+        } 
     }
-  }
+    
   return array.sort().join('');
 }
 
